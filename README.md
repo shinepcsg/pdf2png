@@ -13,6 +13,8 @@ PDF 파일을 고품질 PNG 이미지로 간편하게 변환하는 윈도우 데
 
 ## 📸 스크린샷
 
+![PDF2PNG Converter 스크린샷](screenshots/screenshot.png)
+
 > 프로그램 실행 후 PDF 파일을 드래그하거나 클릭하여 추가합니다.
 
 ## 🚀 사용법
