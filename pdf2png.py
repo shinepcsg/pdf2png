@@ -12,7 +12,7 @@ from tkinter import filedialog
 from pathlib import Path
 
 import fitz  # PyMuPDF
-from PIL import Image, ImageTk
+from PIL import Image, ImageOps, ImageTk
 
 import customtkinter as ctk
 from tkinterdnd2 import TkinterDnD, DND_FILES
@@ -926,7 +926,7 @@ class ImgToPdfTab:
                     f"처리 중... ({i+1}/{total}) {Path(fp).name}",
                     i / total)
                 try:
-                    img = Image.open(fp)
+                    img = ImageOps.exif_transpose(Image.open(fp))
                     # RGBA/P 모드 → RGB 변환 (PDF 호환성)
                     if img.mode in ("RGBA", "P", "LA"):
                         background = Image.new("RGB", img.size, (255, 255, 255))
